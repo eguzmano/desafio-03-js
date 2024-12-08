@@ -31,34 +31,31 @@ const boxes = document.querySelector('.boxes')
 const newDiv = document.createElement('div')
 
 document.addEventListener("keydown", (event) => {
-  const key = event.key.toLowerCase(); // Convertimos a minúscula para evitar problemas
+  const key = event.key.toLowerCase();
 
-  // Cambiar color del div "key" para a, s, d
   if (key === "a") {
-    currentColor = "pink"; // Rosado
+    currentColor = "pink";
     keyDiv.style.backgroundColor = currentColor;
   } else if (key === "s") {
-    currentColor = "orange"; // Naranjo
+    currentColor = "orange";
     keyDiv.style.backgroundColor = currentColor;
   } else if (key === "d") {
-    currentColor = "lightblue"; // Celeste
+    currentColor = "lightblue";
     keyDiv.style.backgroundColor = currentColor;
   }
 
-  // Crear un nuevo div con color para q, w, e
   if (key === "q") {
-    currentColor = "purple"; // Morado
+    currentColor = "purple";
     createNewDiv(currentColor);
   } else if (key === "w") {
-    currentColor = "gray"; // Gris
+    currentColor = "gray";
     createNewDiv(currentColor);
   } else if (key === "e") {
-    currentColor = "brown"; // Café
+    currentColor = "brown";
     createNewDiv(currentColor);
   }
 });
 
-// Función para crear un nuevo div con un color dado
 function createNewDiv(color) {
   const newDiv = document.createElement("div");
   newDiv.className = "new-div";
